@@ -1,6 +1,7 @@
 import Preloader from "@/src/components/Preloader";
 import "@/styles/globals.css";
 import { Fragment, useEffect, useState } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App({ Component, pageProps }) {
   const [loader, setLoader] = useState(true);
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
     <Fragment>
       {loader && <Preloader />}
       <Component {...pageProps} />
+      <SpeedInsights />
     </Fragment>
   );
 }
