@@ -1,4 +1,4 @@
-import Analytics from "@/src/components/analytics";
+import GAnalytics from "@/src/components/analytics";
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -24,7 +24,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Analytics />
+        <GAnalytics />
       </body>
     </Html>
   );

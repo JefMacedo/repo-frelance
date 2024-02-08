@@ -1,6 +1,6 @@
 import React from "react";
 
-const Analytics = () => (
+const GAnalytics = () => (
     <>
         <script
             async
@@ -21,4 +21,4 @@ const Analytics = () => (
     </>
 );
 
-export default Analytics
+export default GAnalytics
