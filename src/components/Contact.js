@@ -11,7 +11,7 @@ const contactInfo = [
   },
   { id: 2, 
     label: "E-mail", 
-    value: "dev.jmacedo@gmail.com", 
+    value: "dev.jefersonmacedo@gmail.com", 
     icon: "fas fa-envelope",
   },
   {
@@ -47,10 +47,10 @@ const Contact = () => {
     } else {
       emailjs
         .send(
-          "service_seruhwu", // service id
-          "template_21aw58z", // template id
+          "service_serukwu", // service id
+          "template_22aw58z", // template id
           mailData,
-          "Q3pccdLZhU-mZT7tQ" // public api
+          "Q3pccdLZdhU-mZT7tQ" // public api
         )
         .then(
           (response) => {
@@ -171,7 +171,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="col-lg-5 ms-auto col-xl-4 pt-5 pt-lg-0">
+          <div className="col-lg-6 ms-auto col-xl-5 pt-5 pt-lg-0">
             <ul className="contact-infos">
               {contactInfo.map((contact) => (
                 <li key={contact.id}>
