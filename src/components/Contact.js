@@ -26,10 +26,11 @@ const Contact = () => {
   const [mailData, setMailData] = useState({
     name: "",
     email: "",
+    tel: "",
     message: "",
     subject: "",
   });
-  const { name, email, subject, message } = mailData;
+  const { name, email, tel, subject, message } = mailData;
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const onChange = (e) => {
@@ -40,6 +41,7 @@ const Contact = () => {
     if (
       name.length === 0 ||
       email.length === 0 ||
+      tel.length > 10 ||
       message.length === 0 ||
       subject.length === 0
     ) {
@@ -47,10 +49,10 @@ const Contact = () => {
     } else {
       emailjs
         .send(
-          "service_serukwu", // service id
-          "template_22aw58z", // template id
+          "gmail-dev.jefersonmacedo", // service id
+          "template_tsvqybr", // template id
           mailData,
-          "Q3pccdLZdhU-mZT7tQ" // public api
+          "6osJxfvLx7PrNYF4x" // public key api
         )
         .then(
           (response) => {
@@ -59,10 +61,10 @@ const Contact = () => {
             setTimeout(() => {
               setSuccess(false);
             }, 3000);
-            setMailData({ name: "", email: "", message: "", subject: "" });
+            setMailData({ name: "", email: "", tel: "", message: "", subject: "" });
           },
           (err) => {
-            console.log(err.text);
+            alert("erro ao enviar o email, favor entrar em contato pelo botão de WhatsApp.");
           }
         );
     }
@@ -116,6 +118,25 @@ const Contact = () => {
                       />
                     </div>
                   </div>
+                  {/* TO-DO - Implementar mascara para o telefone */}
+                  {/* TO-DO - Melhorar a validação de telefone */}
+                  {/* TO-DO - Implementar a opção para inserir números estrangeiros */}
+                  <div className="col-12">
+                    <div className="form-group">
+                      <label className="form-label">Telefone</label>
+                      <input
+                        name="tel"
+                        onChange={(e) => onChange(e)}
+                        value={tel}
+                        id="tel"
+                        placeholder="Seu telefone com WhatsApp *"
+                        className={`form-control ${
+                          error ? (((tel.length > 9 && tel.length < 12) && (parseInt(tel,10))) ? "" : "invalid") : ""
+                        }`}
+                        type="text"
+                      />
+                    </div>
+                  </div>
                   <div className="col-12">
                     <div className="form-group">
                       <label className="form-label">Assunto</label>
@@ -155,6 +176,7 @@ const Contact = () => {
                       Mensagem enviada com sucesso. Em breve retornaremos seu contato.
                     </span>
                   </div>
+                  {/*  TO-DO - Implementar ferramenta para evitar o spam de email (captcha ou outro tipo de restrição de envio de e-mail) */}
                   <div className="col-md-12">
                     <div className="send">
                       <button

@@ -3,38 +3,38 @@ import SectionTitle from "./SectionTitle";
 const portfolioData = [
   {
     id: 1,
-    title: "Landing page para agência",
-    subtitle: "Web/WordPress",
+    title: "Site para arquitetura e design de interiores",
+    subtitle: "Web/ReactJs/NextJs",
     image: "assets/img/project-1.jpg",
   },
   {
     id: 2,
-    title: "Site para psicólogo",
-    subtitle: "Web/WordPress",
+    title: "Site para clínica psicológica",
+    subtitle: "Web/WordPress/JS",
     image: "assets/img/project-2.jpg",
   },
   {
     id: 3,
-    title: "Site para dentista",
-    subtitle: "Web/WordPress",
+    title: "Site para clínica de dentista",
+    subtitle: "Web/WordPress/JS",
     image: "assets/img/project-3.jpg",
   },
   {
     id: 4,
-    title: "Site para imobiliária",
-    subtitle: "Web/WordPress",
+    title: "Site para imobiliária e negócios",
+    subtitle: "Web/WordPress/PHP",
     image: "assets/img/project-4.jpg",
   },
   {
     id: 5,
     title: "E-Commerce de dropshipping",
-    subtitle: "Web/WordPress",
+    subtitle: "Web/WordPress/JS",
     image: "assets/img/project-5.jpg",
   },
   {
     id: 6,
     title: "Site de Notícias online",
-    subtitle: "Web/WordPress",
+    subtitle: "Web/WordPress/JS/PHP",
     image: "assets/img/project-6.jpg",
   },
 ];

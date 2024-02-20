@@ -15,21 +15,20 @@ const Home = () => {
                 <span>Olá!</span>
               </h6>
               <h1>
-                Nós fazemos <br />
-                Sua experiência
-                <br />
-                de Design
+                Eu faço <br />
+                A construção <br />
+                Do seu projeto!
               </h1>
               <p>
-                Eu desenho e desenvolvo serviços
-                para clientes de todos os tamanhos,
-                especializando-me na criação de sites,
+                Eu planejo e desenvolvo soluções e projetos
+                para clientes de todos os tamanhos e setores.
+                Sou especializado na criação de sites,
                 landing page, serviços web, projetos personalizados,
-                lojas online elegantes e modernos.
+                lojas online com design elegante e moderno.
               </p>
               <div className="btn-bar">
-                <a className="px-btn px-btn-theme" href="#contactus">
-                  Vamos Conversar
+                <a className="px-btn px-btn-theme" target="_blank" href="https://wa.me/65992833530">
+                  <i className="fab fa-whatsapp" /> Vamos Conversar
                 </a>
               </div>
             </div>

@@ -8,6 +8,7 @@ import Skill from "@/src/components/Skill";
 import Testimonial from "@/src/components/Testimonial";
 import ImageView from "@/src/components/popup/ImageView";
 import { boston } from "@/src/utils";
+import WhatsAppButton from "@/src/components/WhatsAppButton";
 import { Fragment, useEffect } from "react";
 const Index = () => {
   useEffect(() => {
@@ -51,6 +52,9 @@ const Index = () => {
       {/* Footer */}
       <Footer />
       {/* End Footer */}
+      {/* WhatsApp float button */}
+      <WhatsAppButton/>
+      {/* End WhatsApp float button */}
     </Fragment>
   );
 };
