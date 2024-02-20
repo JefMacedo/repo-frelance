@@ -41,7 +41,7 @@ const Contact = () => {
     if (
       name.length === 0 ||
       email.length === 0 ||
-      tel.length > 10 ||
+      ((tel.length > 9 && tel.length < 12) && (parseInt(tel,10))) ||
       message.length === 0 ||
       subject.length === 0
     ) {
